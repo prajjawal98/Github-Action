@@ -35,10 +35,3 @@ jobs:
 
       - name: step 4 - Build project with Maven
         run: mvn -B package --file pom.xml
-
-      - name: step 5 - clean up the output directory, and verify the outcome
-        run: mvn clean verify
-
-      - name: step 6- Spellcheck
-        uses: igsekor/pyspelling-any@v0.0.2
-
