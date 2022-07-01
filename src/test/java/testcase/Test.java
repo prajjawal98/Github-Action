@@ -7,15 +7,26 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
+import java.awt.*;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+
 public class Test extends BaseClass {
 
     public WebDriver driver;
 
     @BeforeClass
-    public void setUp() {
+    public void setUp() throws URISyntaxException, IOException {
         BaseClass bs= new BaseClass();
         driver = bs.initialize_driver();
-        driver.get("https://demo.nopcommerce.com/");
+
+        // now we enter our URL that we want to open in our
+        // default browser
+       // String cURL = driver.executeScript("return document.URL");
+       // System.out.println("Current URL is : "+cURL);
+
+       driver.get("https://demo.nopcommerce.com/");
 
     }
 
