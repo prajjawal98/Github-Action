@@ -17,7 +17,6 @@
         <sonar.moduleKey>${project.groupId}:${project.artifactId}</sonar.moduleKey>
     </properties>
 
-
     <dependencies>
 
         <!-- https://mvnrepository.com/artifact/org.testng/testng -->
@@ -42,7 +41,6 @@
 
     </dependencies>
     <build>
-
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -76,10 +74,6 @@
                     </execution>
                 </executions>
             </plugin>
-
-
         </plugins>
     </build>
-
-
 </project>

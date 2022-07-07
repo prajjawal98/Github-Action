@@ -13,15 +13,14 @@ public class Test extends BaseClass {
 
     @BeforeClass
     public void setUp() {
-        BaseClass bs= new BaseClass();
+        BaseClass bs = new BaseClass();
         driver = bs.initialize_driver();
-       driver.get("https://demo.nopcommerce.com/");
+        driver.get("https://demo.nopcommerce.com/");
 
     }
 
     @org.testng.annotations.Test
-    public void loginTest1() throws InterruptedException
-    {
+    public void loginTest1() throws InterruptedException {
         driver.findElement(By.linkText("Log in")).click();
         driver.findElement(By.id("Email")).sendKeys("prajjawalkansal@gmail.com");
         driver.findElement(By.id("Password")).sendKeys("testcase.Test@123");
@@ -43,8 +42,7 @@ public class Test extends BaseClass {
     }
 
     @AfterClass
-    public void tearDown()
-    {
+    public void tearDown() {
         driver.quit();
     }
 
