@@ -45,8 +45,8 @@ public class Test extends BaseClass {
 
     @org.testng.annotations.Test
     public void loginTest3(){
-        String text = driver.findElement(By.xpath("/html/body/div[6]/div[1]/div[2]/div[1]/a/img")).getText();
-        Assert.assertEquals(driver.getTitle(),text);
+        String text = driver.findElement(By.cssSelector("//div[h2=\"Welcome to our store\"]")).getText();
+        Assert.assertEquals(text,"Welcome to our store");
     }
 
     @AfterClass

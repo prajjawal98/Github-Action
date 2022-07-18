@@ -15,6 +15,7 @@
         <sonar.organization>prajjawal98</sonar.organization>
         <sonar.projectKey>prajjawal98_Github-Action</sonar.projectKey>
         <sonar.moduleKey>${project.groupId}:${project.artifactId}</sonar.moduleKey>
+        <selenium-java>4.1.0</selenium-java>
     </properties>
 
 
@@ -24,7 +25,7 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.1.0</version>
+            <version>${selenium-java}</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.testng/testng -->
