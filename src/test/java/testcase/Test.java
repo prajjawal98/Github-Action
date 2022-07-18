@@ -43,12 +43,6 @@ public class Test extends BaseClass {
         Assert.assertEquals(driver.getTitle(), expected);
     }
 
-    @org.testng.annotations.Test
-    public void loginTest3(){
-        String text = driver.findElement(By.xpath("//*[contains(text(),'Welcome to our store')]")).getText();
-        Assert.assertEquals(text,"Welcome to our store");
-    }
-
     @AfterClass
     public void tearDown()
     {
