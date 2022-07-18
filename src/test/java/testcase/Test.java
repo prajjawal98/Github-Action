@@ -45,7 +45,7 @@ public class Test extends BaseClass {
 
     @org.testng.annotations.Test
     public void loginTest3(){
-        String text = driver.findElement(By.cssSelector("//div[h2=\"Welcome to our store\"]")).getText();
+        String text = driver.findElement(By.xpath("//*[contains(text(),'Welcome to our store')]")).getText();
         Assert.assertEquals(text,"Welcome to our store");
     }
 
