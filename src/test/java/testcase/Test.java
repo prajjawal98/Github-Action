@@ -45,8 +45,8 @@ public class Test extends BaseClass {
 
     @org.testng.annotations.Test
     public void loginTest3(){
-        String expected = "nopCommerce demo store";
-        Assert.assertEquals(driver.getTitle(),expected);
+        String text = driver.findElement(By.xpath("/html/body/div[6]/div[1]/div[2]/div[1]/a/img")).getText();
+        Assert.assertEquals(driver.getTitle(),text);
     }
 
     @AfterClass
