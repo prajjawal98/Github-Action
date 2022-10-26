@@ -17,15 +17,11 @@ public class BaseClass {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless");
-        options.addArguments("--disable-gpu");
-        options.addArguments("--window-size=1920,1200");
-        options.addArguments("--ignore-certificate-errors");
-        options.addArguments("--no-sandbox");
-        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--disable-gpu","--window-size=1920,1200","--disable-dev-shm-usage");
         options.addArguments("--disable-extensions");
 
         driver = new ChromeDriver(options);
-        driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.minutes);
         driver.manage().window().maximize();
         testdriver.set(driver);
         return getDriver();
