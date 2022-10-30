@@ -17,8 +17,9 @@ public class BaseClass {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless");
-        options.addArguments("--disable-gpu","--window-size=1920,1200","--disable-dev-shm-usage");
-        options.addArguments("--disable-extensions");
+        options.addArguments("--disable-gpu","--disable-dev-shm-usage");
+        options.addArguments("--window-size=1920,1200","--disable-extensions");
+        //options.addArguments();
 
         driver = new ChromeDriver(options);
         driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.minutes);
