@@ -26,9 +26,8 @@ public class Test extends BaseClass {
         driver.findElement(By.id("Email")).sendKeys("prajjawalkansal@gmail.com");
         driver.findElement(By.id("Password")).sendKeys("testcase.Test@123");
         driver.findElement(By.xpath("//button[@class='button-1 login-button']")).submit();
-        Thread.sleep(3000);
-        String expected = "nopCommerce demo store. Login";
-        Assert.assertEquals(driver.getTitle(), expected);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        Assert.assertEquals(driver.getTitle(), "nopCommerce demo store. Login");
 
     }
 
@@ -38,9 +37,8 @@ public class Test extends BaseClass {
         driver.findElement(By.id("Email")).sendKeys("avadhsharma566@gmail.com");
         driver.findElement(By.id("Password")).sendKeys("prajjawal1234");
         driver.findElement(By.xpath("//button[@class='button-1 login-button']")).submit();
-        Thread.sleep(3000);
-        String expected = "nopCommerce demo store. Login";
-        Assert.assertEquals(driver.getTitle(), expected);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        Assert.assertEquals(driver.getTitle(), "nopCommerce demo store. Login");
     }
 
     @AfterClass
